@@ -15,9 +15,7 @@ spec:
             containers:
                 - name: query
                   image: backescape/query
-
 ---
-
 apiVersion: v1
 kind: Service
 metadata:
@@ -25,7 +23,6 @@ metadata:
 spec:
     selector:
         app: query
-    #    type: ClusterIP
     ports:
         - name: query
           protocol: TCP

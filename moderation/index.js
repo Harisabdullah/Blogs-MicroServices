@@ -30,11 +30,14 @@ app.post('/events', async (req, res) => {
 app.listen(4003, async () => {
   console.log('Moderation Service Listening on 4003');
 
-  const res = await axios.get('http://event-bus-srv:4005/events');
+  const res = await axios.get('http://event-bus-srv:4005/events').catch(e=>{
+    console.log("Unable to get upto speed. will try again");
+  });
 
   for (let event of res.data) {
     console.log('Processing missed event: ', event.type);
     await handleEvent(event.type, event.data);
   }
   console.log("Up to date");
+  console.log("Hello");
 });

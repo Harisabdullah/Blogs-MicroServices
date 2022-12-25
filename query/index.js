@@ -48,7 +48,9 @@ app.listen(4002, async () => {
   console.log('Query Service Listening on 4002');
   console.log('Getting up to speed ...');
 
-  const res = await axios.get('http://event-bus-srv:4005/events');
+  const res = await axios.get('http://event-bus-srv:4005/events').catch(e => {
+    console.log("Event service not up");
+  });
 
   for (let event of res.data){
     console.log('Processing missed event: ', event.type);
