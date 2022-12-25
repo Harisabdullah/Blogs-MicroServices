@@ -17,7 +17,7 @@ Before you begin, make sure you have the following installed on your machine:
 ```shell
 npm install
 ```
-3. Deployment configs can be found in the `infra/k8s` directory. Make sure to change the deployment files to your own username. You must also have ingress-nginx installed with Docker. Run the following command to apply the deployment configs:
+3. Deployment configs can be found in the `infra/k8s` directory. Make sure to change the deployment files to your own username. You must also have ingress-nginx installed with Docker. Run the following command to apply the deployment configs: (Will be working with skaffold in newer projects).
 ``` shell
 kubectl apply .
 ```
