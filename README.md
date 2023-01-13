@@ -29,4 +29,4 @@ kubectl apply .
 5. Visit `posts.com` in your browser and the app should be running.
 
 # Support
-If you have any questions or need assistance, feel free to contact me at hariskhan1435@gmail.com
+If you have any questions or need assistance, feel free to contact me at [Here](hariskhan1435@gmail.com?subject=[GitHub]%20Source%20Han%20Sans) I am always happy to help!
